@@ -7,13 +7,17 @@ const tweet = new Schema({
         type : String
     },
     likes : {
-        type : Number
+        types : [
+            mongoose.Schema.Types.ObjectId
+        ]
     },
-    noOfReTweet : {
-        type : Number
-    },
-    comment : {
-        type : ObjectId
+    // noOfReTweet : {
+    //     type : Number
+    // },
+    comments : {
+        type : [
+            mongoose.Schema.Types.ObjectId
+        ]
     }
 })
 
